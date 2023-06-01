@@ -1,5 +1,11 @@
-interface BlogProps {}
+import { FC } from 'react'
 
-export const Blog: React.FC<BlogProps> = ({}) => {
-    return (null)
+interface BlogProps {
+  
 }
+
+const Blog: FC<BlogProps> = ({}) => {
+  return <div>Blog</div>
+}
+
+export default Blog

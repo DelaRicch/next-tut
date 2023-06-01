@@ -1,5 +1,11 @@
-interface AboutProps {}
+import { FC } from 'react'
 
-export const About: React.FC<AboutProps> = ({}) => {
-    return (null)
+interface AboutProps {
+  
 }
+
+const About: FC<AboutProps> = ({}) => {
+  return <div>About</div>
+}
+
+export default About

@@ -1,5 +1,11 @@
-interface ContactProps {}
+import { FC } from 'react'
 
-export const Contact: React.FC<ContactProps> = ({}) => {
-    return (null)
+interface ContactProps {
+  
 }
+
+const Contact: FC<ContactProps> = ({}) => {
+  return <div>Contact</div>
+}
+
+export default Contact

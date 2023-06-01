@@ -1,5 +1,11 @@
-interface PortfolioProps {}
+import { FC } from 'react'
 
-export const Portfolio: React.FC<PortfolioProps> = ({}) => {
-    return (null)
+interface PortfolioProps {
+  
 }
+
+const Portfolio: FC<PortfolioProps> = ({}) => {
+  return <div>Portfolio</div>
+}
+
+export default Portfolio
