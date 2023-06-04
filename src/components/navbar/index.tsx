@@ -29,7 +29,7 @@ export const Navbar: React.FC<NavbarProps> = ({}) => {
             {link.title}
           </Link>
         ))}
-        <button className="flex items-center p-[5px] text-white cursor-pointer rounded-[3px] border-none bg-lightGreen">
+        <button className="flex items-center justify-center  p-[5px] text-white cursor-pointer rounded-[3px] border-none bg-lightGreen">
           Logout
         </button>
       </div>
