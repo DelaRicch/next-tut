@@ -1,4 +1,5 @@
 import Link from "next/link";
+import DarkModeToggle from "../darkmode-toggle";
 
 interface NavbarProps {}
 
@@ -24,6 +25,7 @@ export const Navbar: React.FC<NavbarProps> = ({}) => {
         DevRicch
       </Link>
       <div className="flex items-center gap-5">
+        <DarkModeToggle />
         {links.map((link) => (
           <Link className="" href={link.url} key={link.id}>
             {link.title}

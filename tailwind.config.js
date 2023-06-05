@@ -10,6 +10,11 @@ module.exports = {
       colors: {
         lightGreen: "#53C28B",
       },
+      backgroundImage: {
+        "illustration": "url(/illustration.png)",
+        "application": "url(/apps.jpg)",
+        "website": "url(/websites.jpg)"
+      },
       keyframes: {
         move: {
           from: { transform: "translateY(-10px)" },

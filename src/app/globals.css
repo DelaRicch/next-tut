@@ -6,3 +6,18 @@ html {
   background: #111111;
   color: #bbbbbb;
 }
+
+
+.theme {
+ transition: all .5s ease;
+}
+
+.light {
+  color: #111111;
+  background: white;
+}
+
+.dark {
+  background: #111111;
+  color: #bbbbbb;
+}
