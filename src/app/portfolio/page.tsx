@@ -14,7 +14,7 @@ const Portfolio: FC<PortfolioProps> = ({}) => {
   return <main>
     <h2 className="my-5 text-[2.5rem] font-bold">Choose a gallery</h2>
     <div className="flex items-center gap-10 ">
-      <Link href='/portfolio/illustations' className={`${linkStyles} bg-illustration  `}>
+      <Link href='/portfolio/illustrations' className={`${linkStyles} bg-illustration  `}>
         <span className={titleStyles}>Illustrations</span>
       </Link>
       <Link href='/portfolio/websites' className={`${linkStyles} bg-website`}>
