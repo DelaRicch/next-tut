@@ -18,6 +18,17 @@ const getData = async (id: any) => {
   }
 }
 
+export async function generateMetadata({ params }: BlogPostProps) {
+  const post = await getData(params.id)
+  const PostTitle = post.title
+  const PostDesc = post.desc
+
+  return {
+    title: PostTitle.charAt(0).toUpperCase() + PostTitle.slice(1),
+    description: PostDesc.charAt(0).toUpperCase() + PostDesc.slice(1),
+  };
+}
+
 const BlogPost: FC<BlogPostProps> = async ({ params }) => {
   const data = await getData(params.id);
   

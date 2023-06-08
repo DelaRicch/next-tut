@@ -1,5 +1,9 @@
+"use client"
+
 import Link from "next/link";
 import DarkModeToggle from "../darkmode-toggle";
+import { signOut, useSession } from "next-auth/react";
+import { MouseEventHandler } from "react";
 
 interface NavbarProps {}
 
@@ -19,6 +23,12 @@ const links: LinksProps[] = [
 ];
 
 export const Navbar: React.FC<NavbarProps> = ({}) => {
+  const session = useSession();
+
+  const handleClick: MouseEventHandler<HTMLButtonElement> = () => {
+    signOut();
+  };
+
   return (
     <nav className="h-[100px] flex items-center justify-between ">
       <Link className="font-bold text-[22px]" href="/">
@@ -31,9 +41,15 @@ export const Navbar: React.FC<NavbarProps> = ({}) => {
             {link.title}
           </Link>
         ))}
-        <button className="flex items-center justify-center  p-[5px] text-white cursor-pointer rounded-[3px] border-none bg-lightGreen">
-          Logout
-        </button>
+
+        {session.status === "authenticated" && (
+          <button
+            onClick={handleClick}
+            className="flex items-center justify-center  p-[5px] text-white cursor-pointer rounded-[3px] border-none bg-lightGreen"
+          >
+            Logout
+          </button>
+        )}
       </div>
     </nav>
   );

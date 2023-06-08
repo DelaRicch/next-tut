@@ -2,8 +2,11 @@ import Button from '@/components/button'
 import Image from 'next/image'
 import { FC } from 'react'
 
-interface ContactProps {
-  
+interface ContactProps {}
+
+export const metadata = {
+  title: 'DevRicch Contact Information',
+  description: "This is contact page description"
 }
 
 const Contact: FC<ContactProps> = ({}) => {
